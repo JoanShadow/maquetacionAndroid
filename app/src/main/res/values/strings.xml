@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">Layout</string>
+    <string name="dialogue">Dialogue</string>
+    <string name="affair">Affair: </string>
+    <string name="affairHint">Write the subject here..</string>
+    <string name="message">Message: </string>
+    <string name="messageHint">Write the message here..</string>
+
+    <string name="escoge_presidente">Mr President!</string>
+    <string name="rajoy">Mariano Rajoy</string>
+    <string name="puigdemont">Carles Puigdemont</string>
+
+    <string-array name="spinnerItems">
+
+        <item>@string/escoge_presidente</item>
+        <item>@string/rajoy</item>
+        <item>@string/puigdemont</item>
+        <item>Pablito</item>
+        <item>Albertito</item>
+
+    </string-array>
+
+    <string name="txtCheck">Choose your puppet</string>
+
+</resources>

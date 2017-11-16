@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gris_fondo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gris_fondo"
+        android:paddingLeft="@dimen/space_8dp"
+        android:paddingRight="@dimen/space_8dp"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/contFotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_2dp"
+            android:background="@color/fondo_fotos"
+            android:padding="@dimen/space_8dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/alto_foto"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/alto_foto"
+                android:layout_marginLeft="@dimen/space_4dp"
+                android:layout_marginRight="@dimen/space_4dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/rajoy" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/alto_foto"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/puigdemont" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_40dp"
+            android:layout_below="@+id/contFotos" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emptyView"
+            android:layout_marginTop="@dimen/space_2dp"
+            android:background="@color/fondo_fotos"
+            android:padding="@dimen/space_8dp">
+
+            <TextView
+                android:id="@+id/dialogue"
+                style="@style/myTxVwStyle"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="@string/dialogue"
+                android:textSize="@dimen/text_20sp"
+                android:textStyle="bold" /> <!-- bold|italic|normal -->
+
+            <TextView
+                android:id="@+id/affair"
+                style="@style/myTxVwStyleForm"
+                android:layout_width="@dimen/space_80dp"
+                android:layout_below="@+id/dialogue"
+                android:text="@string/affair"
+                android:textSize="@dimen/text_16sp" />
+
+            <EditText
+                android:id="@+id/txtAffair"
+                style="@style/myTxVwStyleForm"
+                android:layout_below="@id/dialogue"
+                android:layout_toRightOf="@id/affair"
+                android:hint="@string/affairHint"
+                android:textSize="@dimen/text_12sp" />
+
+            <TextView
+                android:id="@+id/message"
+                style="@style/myTxVwStyleForm"
+                android:layout_width="@dimen/space_80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/affair"
+                android:text="@string/message"
+                android:textSize="@dimen/text_16sp" />
+
+            <EditText
+                android:id="@+id/txtMessage"
+                style="@style/myTxVwStyleForm"
+                android:layout_below="@id/txtAffair"
+                android:layout_toRightOf="@id/message"
+                android:hint="@string/messageHint"
+                android:textSize="@dimen/text_12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/message">
+
+                <Spinner
+                    android:id="@+id/mySpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/spinnerItems" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtCheck"></CheckBox>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

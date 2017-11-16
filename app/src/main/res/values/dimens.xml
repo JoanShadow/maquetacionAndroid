@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Fotos -->
+    <dimen name="alto_foto">110dp</dimen>
+
+    <!-- Espacios -->
+    <dimen name="space_80dp">80dp</dimen>
+    <dimen name="space_40dp">40dp</dimen>
+    <dimen name="space_8dp">8dp</dimen>
+    <dimen name="space_6dp">6dp</dimen>
+    <dimen name="space_4dp">4dp</dimen>
+    <dimen name="space_2dp">2dp</dimen>
+
+    <!-- Textos -->
+    <dimen name="text_12sp">12sp</dimen>
+    <dimen name="text_14sp">14sp</dimen>
+    <dimen name="text_16sp">16sp</dimen>
+    <dimen name="text_20sp">20sp</dimen>
+
+</resources>
