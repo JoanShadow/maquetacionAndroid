@@ -2,34 +2,31 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@color/gris_fondo">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/buttons"
-        android:background="@color/gris_fondo">
+        >
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/gris_fondo"
             android:paddingLeft="@dimen/space_8dp"
             android:paddingRight="@dimen/space_8dp"
-            android:paddingTop="16dp">
+            android:paddingTop="16dp"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/contFotos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/space_2dp"
-                android:background="@color/fondo_fotos"
-                android:padding="@dimen/space_8dp">
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/alto_foto"
-                    android:layout_weight="1" />
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/blanco"
+                android:padding="@dimen/space_8dp"
+                android:layout_marginRight="@dimen/space_4dp">
 
                 <ImageView
                     android:layout_width="0dp"
@@ -49,20 +46,14 @@
 
             </LinearLayout>
 
-            <View
-                android:id="@+id/emptyView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/space_40dp"
-                android:layout_below="@+id/contFotos" />
-
             <RelativeLayout
                 android:id="@+id/boxForm"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/emptyView"
-                android:layout_marginTop="@dimen/space_2dp"
-                android:background="@color/fondo_fotos"
-                android:padding="@dimen/space_8dp">
+                android:background="@color/colorPrimaryDark"
+                android:padding="@dimen/space_8dp"
+                android:layout_marginLeft="@dimen/space_4dp">
 
                 <TextView
                     android:id="@+id/dialogue"
@@ -81,14 +72,11 @@
                     android:text="@string/affair"
                     android:textSize="@dimen/text_16sp" />
 
-                <!--android:layout_below="@id/dialogue"
-                    android:layout_toRightOf="@id/affair"-->
                 <EditText
                     android:id="@+id/txtAffair"
                     style="@style/myTxVwStyleForm"
-                    android:layout_below="@+id/dialogue"
-                    android:layout_toEndOf="@+id/affair"
-                    android:layout_toRightOf="@+id/affair"
+                    android:layout_below="@id/dialogue"
+                    android:layout_toRightOf="@id/affair"
                     android:hint="@string/affairHint"
                     android:textSize="@dimen/text_12sp" />
 
@@ -102,14 +90,11 @@
                     android:text="@string/message"
                     android:textSize="@dimen/text_16sp" />
 
-                <!--android:layout_below="@id/txtAffair"
-                    android:layout_toRightOf="@id/message"-->
                 <EditText
                     android:id="@+id/txtMessage"
                     style="@style/myTxVwStyleForm"
-                    android:layout_alignBaseline="@+id/message"
-                    android:layout_toEndOf="@+id/message"
-                    android:layout_toRightOf="@+id/message"
+                    android:layout_below="@id/txtAffair"
+                    android:layout_toRightOf="@id/message"
                     android:hint="@string/messageHint"
                     android:textSize="@dimen/text_12sp" />
 
@@ -136,8 +121,7 @@
 
             </RelativeLayout>
 
-
-        </RelativeLayout>
+        </LinearLayout>
 
     </ScrollView>
 
@@ -157,7 +141,7 @@
             android:layout_margin="@dimen/space_4dp"
             android:layout_weight="1"
             android:background="@drawable/button_selector"
-            android:text="@string/btn1" />
+            android:text="Accept" />
 
         <Button
             android:id="@+id/btnLoad"
@@ -166,7 +150,7 @@
             android:layout_margin="@dimen/space_4dp"
             android:layout_weight="1"
             android:background="@drawable/button_selector"
-            android:text="@string/btn2"/>
+            android:text="Apply"/>
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="0dp"
@@ -174,8 +158,8 @@
             android:layout_margin="@dimen/space_4dp"
             android:layout_weight="1"
             android:background="@drawable/button_selector"
-            android:text="@string/btn3"/>
-
+            android:text="Cancel"/>
+        
     </LinearLayout>
 
 </RelativeLayout>

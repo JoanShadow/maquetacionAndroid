@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DialogoProyecto</string>
+    <string name="dialogue">Dialogo</string>
+    <string name="affair">"Asunto: "</string>
+    <string name="affairHint">Escribe el asunto aquí..</string>
+    <string name="message">"Mensaje: "</string>
+    <string name="messageHint">Escribe el mensaje aquí..</string>
+    <string name="escoge_presidente">Sr Presidente!</string>
+    <string name="txtCheck">Escoge tu marioneta</string>
+    <string name="btn1">Guardar</string>
+    <string name="btn2">Cargar</string>
+    <string name="btn3">Eliminar</string>
+</resources>
