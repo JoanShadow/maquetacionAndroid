@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,6 +31,7 @@
                     android:layout_weight="1" />
 
                 <ImageView
+                    android:id="@+id/imgFront"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/alto_foto"
                     android:layout_marginLeft="@dimen/space_4dp"
@@ -41,6 +41,7 @@
                     android:src="@drawable/rajoy" />
 
                 <ImageView
+                    android:id="@+id/imgProfile"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/alto_foto"
                     android:layout_weight="1"
@@ -86,6 +87,10 @@
                 <EditText
                     android:id="@+id/txtAffair"
                     style="@style/myTxVwStyleForm"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:maxLength="200"
                     android:layout_below="@+id/dialogue"
                     android:layout_toEndOf="@+id/affair"
                     android:layout_toRightOf="@+id/affair"
@@ -107,6 +112,7 @@
                 <EditText
                     android:id="@+id/txtMessage"
                     style="@style/myTxVwStyleForm"
+                    android:imeOptions="actionDone"
                     android:layout_alignBaseline="@+id/message"
                     android:layout_toEndOf="@+id/message"
                     android:layout_toRightOf="@+id/message"
@@ -142,13 +148,13 @@
     </ScrollView>
 
     <LinearLayout
-    android:id="@+id/buttons"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
 
-    android:background="@color/colorPrimary"
-    android:orientation="horizontal">
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnSave"
@@ -166,7 +172,8 @@
             android:layout_margin="@dimen/space_4dp"
             android:layout_weight="1"
             android:background="@drawable/button_selector"
-            android:text="@string/btn2"/>
+            android:text="@string/btn2" />
+
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="0dp"
@@ -174,7 +181,7 @@
             android:layout_margin="@dimen/space_4dp"
             android:layout_weight="1"
             android:background="@drawable/button_selector"
-            android:text="@string/btn3"/>
+            android:text="@string/btn3" />
 
     </LinearLayout>
 

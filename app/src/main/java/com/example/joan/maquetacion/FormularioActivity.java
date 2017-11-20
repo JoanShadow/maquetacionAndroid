@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 public class FormularioActivity extends AppCompatActivity implements View.OnClickListener {
@@ -25,6 +26,7 @@ public class FormularioActivity extends AppCompatActivity implements View.OnClic
     private Spinner mySpinner;
     private CheckBox cbMrPresident;
     private Button btnSave, btnLoad, btnDelete;
+    private ImageView imgFront, imgProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class FormularioActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_main);
 
         initLayout();
+        loadPersona();
         //Html.fromHtml() Para añadir html
     }
 
@@ -40,6 +43,8 @@ public class FormularioActivity extends AppCompatActivity implements View.OnClic
         txtMessage = findViewById(R.id.txtMessage);
         mySpinner = findViewById(R.id.mySpinner);
         cbMrPresident = findViewById(R.id.cbMrPresident);
+        imgFront = findViewById(R.id.imgFront);
+        imgProfile = findViewById(R.id.imgProfile);
 
         btnSave = findViewById(R.id.btnSave);
         btnLoad = findViewById(R.id.btnLoad);
@@ -48,6 +53,18 @@ public class FormularioActivity extends AppCompatActivity implements View.OnClic
         btnSave.setOnClickListener(this);
         btnLoad.setOnClickListener(this);
         btnDelete.setOnClickListener(this);
+    }
+
+    private void loadPersona() {
+        if(getIntent().getExtras() != null && getIntent().getExtras().containsKey("persona")) {
+            Persona persona = (Persona) getIntent().getExtras().getSerializable("persona");
+            txtAffair.setText(persona.getName());
+            txtMessage.setText(persona.getSurname());
+            mySpinner.setSelection(persona.getSpinnerPosition());
+            cbMrPresident.setChecked(persona.isCheckBoxState());
+            imgFront.setImageResource(persona.getImgFront());
+            imgProfile.setImageResource(persona.getImgProfile());
+        }
     }
 
     private void clearLayout() {

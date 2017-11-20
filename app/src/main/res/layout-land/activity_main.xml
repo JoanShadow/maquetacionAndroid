@@ -29,6 +29,7 @@
                 android:layout_marginRight="@dimen/space_4dp">
 
                 <ImageView
+                    android:id="@+id/imgFront"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/alto_foto"
                     android:layout_marginLeft="@dimen/space_4dp"
@@ -38,6 +39,7 @@
                     android:src="@drawable/rajoy" />
 
                 <ImageView
+                    android:id="@+id/imgProfile"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/alto_foto"
                     android:layout_weight="1"
