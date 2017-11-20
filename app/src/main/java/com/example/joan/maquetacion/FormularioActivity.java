@@ -10,7 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class FormularioActivity extends AppCompatActivity implements View.OnClickListener {
 
     // Persistencia datos SharedPreference
     private final static String SHARED_PREFERENCES = "MisPreferencias";
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /*@Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        Log.d(MainActivity.class.getSimpleName(), "onConfigurationChanged");
+        Log.d(FormularioActivity.class.getSimpleName(), "onConfigurationChanged");
     }*/
 
 }

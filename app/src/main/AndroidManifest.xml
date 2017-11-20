@@ -12,7 +12,7 @@
 
         <!--  android:configChanges="orientation|screenSize" -> para gestionar cambios de configuración de la activity -->
         <!-- android:screenOrientation="portrait" -> para decirle que solo se reproduzca verticalmente -->
-        <activity android:name=".MainActivity">
+        <activity android:name=".ListActivity">
 
             <intent-filter>
 
@@ -23,6 +23,8 @@
             </intent-filter>
 
         </activity>
+
+        <activity android:name=".FormularioActivity"></activity>
 
     </application>
 
